@@ -1,17 +1,28 @@
-# MongoDB
+# 🍃 Conexão Java & MongoDB Atlas
 
-Este repositório armazena configurações e códigos de exemplo para realizar a conexão com um banco de dados NoSQL MongoDB, utilizando a linguagem Java e o gerenciador de dependências Maven.
+![Java](https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=openjdk&logoColor=white)
+![MongoDB](https://img.shields.io/badge/MongoDB-%234ea94b.svg?style=for-the-badge&logo=mongodb&logoColor=white)
+![Maven](https://img.shields.io/badge/Apache%20Maven-C71A36?style=for-the-badge&logo=Apache%20Maven&logoColor=white)
 
-## 📁 Estrutura do Repositório
+Este repositório contém a infraestrutura e os códigos-fonte necessários para estabelecer uma conexão segura e eficiente entre uma aplicação Java e um banco de dados NoSQL hospedado no MongoDB Atlas. O projeto utiliza o Maven para o gerenciamento de dependências e demonstra a configuração básica do `MongoClient`.
 
-O projeto está organizado em dois diretórios principais:
+## 📋 Pré-requisitos
 
-### 1. `Cluster-MongoDB`
-Contém as informações e credenciais para o acesso ao banco de dados em nuvem.
-* **String de Conexão:** Link estruturado para acesso direto ao cluster através do terminal (CMD/Mongo Shell).
-* **Credenciais:** Arquivos de texto contendo a senha e outras informações de autenticação do cluster.
+Antes de executar o projeto, certifique-se de ter as seguintes ferramentas instaladas:
+- **Java Development Kit (JDK)** atualizado.
+- **Apache Maven** para gerenciamento dos pacotes.
+- Uma IDE de sua preferência (recomendado: **IntelliJ IDEA** ou **Visual Studio Code**).
+- Conta ativa no **MongoDB Atlas** com um cluster configurado.
 
-### 2. `Java-MongoDB`
-Diretório contendo o projeto Java configurado para se conectar ao banco.
-* **`pom.xml`:** Arquivo de configuração do Maven contendo as dependências essenciais, como o driver oficial do MongoDB para Java.
-* **Classes Java:** Códigos-fonte implementando a classe de conexão (`MongoClient`) e demais lógicas de integração.
+## 📁 Arquitetura do Repositório
+
+O projeto está modularizado para separar a configuração do banco da lógica da aplicação:
+
+```text
+📦 MongoDB
+ ┣ 📂 Cluster-MongoDB
+ ┃ ┗ 📜 Instruções de acesso e string de conexão (Terminal/Mongo Shell)
+ ┗ 📂 Java-MongoDB
+   ┣ 📜 pom.xml (Dependências do driver oficial do MongoDB)
+   ┗ 📂 src/main/java
+     ┗ 📜 Classes Java (Implementação da conexão e operações básicas)
