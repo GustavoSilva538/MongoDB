@@ -1,4 +1,7 @@
+##Terminal:
 mongosh "mongodb+srv://cluster0.neml1kd.mongodb.net/" --apiVersion 1 --username usuario
-
-
 Senha:1234567890
+
+##VsCode:
+mongodb+srv://usuario:1234567890@cluster0.neml1kd.mongodb.net/
+
